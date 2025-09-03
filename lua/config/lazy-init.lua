@@ -19,8 +19,9 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   spec = "config.lazy",
+  change_detection = { notify = false },
   checker = { 
-    enabled = true 
-  },
+        enabled = true 
+    },
 })
 

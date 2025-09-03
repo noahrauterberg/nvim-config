@@ -26,6 +26,7 @@ vim.opt.smartcase = true
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 vim.opt.showmode = false
+vim.opt.wrap = false
 
 vim.opt.termguicolors = false
 vim.cmd("colorscheme habamax")
