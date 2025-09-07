@@ -5,13 +5,13 @@ return {
   config = function()
     require("nvim-treesitter.configs").setup({
         ensure_installed = {
-          "javascript",
-          -- The five parsers below should always be installed
-          "lua",
-          "vim",
-          "vimdoc",
-          "c",
-          "query"
+            "go",
+            "java",
+            "javascript",
+            "lua",
+            "vim",
+            "vimdoc",
+            "c",
         },
         sync_install = false,
         auto_install = true,
