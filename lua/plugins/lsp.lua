@@ -1,8 +1,8 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    vim.lsp.enable("gopls")
     local lspconfig = require("lspconfig")
+    vim.lsp.enable("gopls")
     lspconfig.gopls.setup({
       settings = {
         gopls = {
@@ -14,6 +14,10 @@ return {
         },
       },
     })
+
+    vim.lsp.enable("pyright")
+    vim.lsp.enable("eslint")
+
   end,
 }
 
