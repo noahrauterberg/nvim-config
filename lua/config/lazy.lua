@@ -21,9 +21,16 @@ require("config.remap")
 vim.g.maplocalleader = " "
 
 require("lazy").setup({
-    spec = {
-        { import = "plugins" }
-    },
-    checker = { enabled = true },
+  spec = {
+    { import = "plugins" }
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    enabled = true,
+    notify = false,
+  },
 })
 

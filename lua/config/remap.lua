@@ -33,13 +33,16 @@ map("n", "<leader>bd", ":bd<CR>")
 
 -- Splitting (and Resizing in the future)
 map("n", "<leader>sv", ":vsplit<CR>") -- split vertically
-map("n", "<leader>sh", ":hsplit<CR>") -- split horizontally
+map("n", "<leader>sh", ":split<CR>") -- split horizontally
 
 -- Window Navigation
 map("n", "<C-h>", "<C-w>h") -- move to left window
 map("n", "<C-j>", "<C-w>j") -- move to bottom window
 map("n", "<C-k>", "<C-w>k") -- move to top window
 map("n", "<C-l>", "<C-w>l") -- move to right window
+
+-- Remove highlighting from last search
+map("n", "<C-m>", ":noh<CR>")
 
 -- Search and replace current file for current word
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
