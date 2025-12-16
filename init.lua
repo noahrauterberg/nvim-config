@@ -2,12 +2,12 @@ require("config.lazy")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("LspGroup", {}),
-  callback = function(bufnr)
+  callback = function(e)
     local map = vim.keymap.set
     local opts = {
       noremap = true,
       silent = true,
-      buffer = bufnr,
+      buffer = e.buf,
     }
 
     -- Native keymaps are handled in remap.lua

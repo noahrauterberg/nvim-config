@@ -4,21 +4,21 @@ return {
 
   config = function()
     require('lualine').setup({
-        theme = 'habamax',
-        options = {
-          icons_enabled = false,
-          component_separators = '|',
-          section_separators = '',
-        },
-        sections = {
-          lualine_a = { 'mode' },
-          lualine_b = { 'branch', 'diff' },
-          lualine_c = { { 'filename', path = 1 } },
-          lualine_x = { 'diagnostics' },
-          lualine_y = { 'filetype', 'lsp_status' },
-          lualine_z = { 'location' }
-        },
-        --[[ tabline = {
+      options = {
+        theme = 'horizon',
+        icons_enabled = true,
+        component_separators = '|',
+        section_separators = '',
+      },
+      sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff' },
+        lualine_c = { { 'filename', path = 1 } },
+        lualine_x = { 'diagnostics' },
+        lualine_y = { 'filetype', 'lsp_status' },
+        lualine_z = { 'location' }
+      },
+      --[[ tabline = {
           lualine_a = { 'buffers' },
           lualine_b = {},
           lualine_c = {},
@@ -26,7 +26,7 @@ return {
           lualine_y = {},
           lualine_z = { 'tabs' }
         }, ]]
-      })
+    })
 
   end
 }
