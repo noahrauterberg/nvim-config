@@ -17,7 +17,7 @@ vim.opt.cursorcolumn = false
 vim.opt.signcolumn = "yes"
 
 vim.opt.undofile = true
-vim.opt.clipboard = "unnamed"
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.swapfile = false
 vim.opt.autoread = true
@@ -35,9 +35,12 @@ vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 vim.opt.showmode = false
 vim.opt.wrap = false
 
-vim.opt.termguicolors = false
-vim.cmd("colorscheme habamax")
+vim.opt.termguicolors = true
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+

@@ -8,12 +8,6 @@ return {
         padding = true,
         sticky = true,
         ignore = nil,
-        toggler = {
-          ---Line-comment toggle keymap
-          line = 'gcc',
-          ---Block-comment toggle keymap
-          block = 'gbc',
-        },
       }
     end
   },

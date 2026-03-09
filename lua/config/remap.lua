@@ -45,7 +45,7 @@ map("n", "<C-l>", "<C-w>l") -- move to right window
 map("n", "<C-m>", ":noh<CR>")
 
 -- Search and replace current file for current word
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- LSP
 map("n", "<leader>gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- goto definition
@@ -62,6 +62,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlights text when yanking",
   group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
   callback = function()
-    vim.highlight.on_yank()
+    vim.hl.on_yank()
   end,
 })
