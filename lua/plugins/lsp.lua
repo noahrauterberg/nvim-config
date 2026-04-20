@@ -81,7 +81,7 @@ return {
     }
 
     vim.lsp.enable("pyright")
-    vim.lsp.enable("typescript-language-server")
+    vim.lsp.enable("vtsls")
     vim.lsp.enable("terraform-ls")
     vim.lsp.enable("lua_ls")
     vim.lsp.enable("gopls")
