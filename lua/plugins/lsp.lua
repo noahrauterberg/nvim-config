@@ -68,7 +68,7 @@ return {
       }
     })
 
-    vim.lsp.config["gopls"] = {
+    vim.lsp.config("gopls", {
       settings = {
         gopls = {
           analyses = {
@@ -78,13 +78,16 @@ return {
           gofumpt = true,
         },
       },
-    }
+    })
 
-    vim.lsp.enable("pyright")
-    vim.lsp.enable("vtsls")
-    vim.lsp.enable("terraform-ls")
-    vim.lsp.enable("lua_ls")
     vim.lsp.enable("gopls")
+    vim.lsp.enable("jdtls")
+    vim.lsp.enable("lemminx")
+    vim.lsp.enable("lua_ls")
+    vim.lsp.enable("pyright")
+    vim.lsp.enable("terraformls")
+    vim.lsp.enable("vscode-spring-boot-tools")
+    vim.lsp.enable("vtsls")
 
   end,
 }

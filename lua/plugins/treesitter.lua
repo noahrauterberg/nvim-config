@@ -4,22 +4,24 @@ return {
   build = ":TSUpdate",
 
   config = function()
-    local ts = require("nvim-treesitter")
-
-    ts.setup({})
-
-    ts.install({
-      "c",
-      "go",
-      "java",
-      "javascript",
-      "lua",
-      "markdown",
-      "markdown_inline",
-      "python",
-      "typescript",
-      "vim",
-      "vimdoc",
+    require("nvim-treesitter.configs").setup({
+      ensure_installed = {
+        "c",
+        "go",
+        "java",
+        "javascript",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "tsx",
+        "typescript",
+        "vim",
+        "vimdoc",
+      },
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
     })
 
     vim.api.nvim_create_autocmd("FileType", {

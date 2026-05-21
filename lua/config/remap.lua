@@ -4,7 +4,6 @@ vim.g.mapleader = " "
 map("n", "<leader>w", ":update<CR>")
 map("n", "<leader>q", ":quit<CR>")
 map("n", "<leader>e", ":Ex<CR>")
--- map("n", "<leader>ff", ":find ")
 
 -- Move selection up/down
 map("v", "J", ":m '>+1<CR>gv=gv")
@@ -44,12 +43,9 @@ map("n", "<C-l>", "<C-w>l") -- move to right window
 -- Remove highlighting from last search
 map("n", "<C-m>", ":noh<CR>")
 
--- Search and replace current file for current word
--- map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 -- LSP
-map("n", "<leader>gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- goto definition
-map("n", "<leader>gS", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts) -- goto definition in split
+-- map("n", "<leader>gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- goto definition
+map("n", "<leader>gS", "<cmd>hsplit | lua vim.lsp.buf.definition()<CR>", opts) -- goto definition in split
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts) -- Code actions
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- Rename symbol
 map("n", "<leader>D", "<cmd>lua vim.diagnostic.open_float({ scope = 'line' })<CR>", opts) -- Line diagnostics (float)
