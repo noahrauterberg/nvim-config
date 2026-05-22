@@ -38,7 +38,6 @@ return {
 
     -- More LSP related keymaps
     vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, {})
-    vim.keymap.set("n", "<leader>ws", builtin.lsp_workspace_symbols, {})
     vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, {})
     vim.keymap.set("n", "<leader>gD", builtin.lsp_definitions, {})
 
