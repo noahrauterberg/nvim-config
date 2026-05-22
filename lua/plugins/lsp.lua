@@ -81,7 +81,6 @@ return {
     })
 
     vim.lsp.enable("gopls")
-    vim.lsp.enable("jdtls")
     vim.lsp.enable("lemminx")
     vim.lsp.enable("lua_ls")
     vim.lsp.enable("pyright")
@@ -91,4 +90,3 @@ return {
 
   end,
 }
-
