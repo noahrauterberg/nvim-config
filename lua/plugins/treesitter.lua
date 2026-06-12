@@ -10,12 +10,14 @@ return {
         "go",
         "java",
         "javascript",
+        "json5",
         "lua",
         "markdown",
         "markdown_inline",
         "python",
         "tsx",
         "typescript",
+        "typescriptreact",
         "vim",
         "vimdoc",
       },
@@ -30,7 +32,7 @@ return {
 
         local ft = vim.bo[args.buf].filetype
         if ft ~= "python" and ft ~= "c" then
-          vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          vim.bo[args.buf].indentexpr = "nvim_treesitter#indent()"
         end
       end,
     })

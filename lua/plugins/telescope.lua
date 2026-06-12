@@ -37,9 +37,10 @@ return {
     vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 
     -- More LSP related keymaps
-    vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, {})
+    vim.keymap.set("n", "<leader>lds", builtin.lsp_document_symbols, {})
     vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, {})
     vim.keymap.set("n", "<leader>gD", builtin.lsp_definitions, {})
+    vim.keymap.set("n", "<leader>gr", builtin.lsp_references, {})
 
     vim.keymap.set('n', '<leader>pws', function()
       local word = vim.fn.expand("<cword>")

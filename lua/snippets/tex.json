@@ -1,0 +1,148 @@
+{
+  "align environment": {
+    "prefix": [
+      "align",
+      "align*"
+    ],
+    "body": [
+      "\\begin{align*}",
+      "\t$0",
+      "\\end{align*}"
+    ]
+  },
+  "gather environment": {
+    "prefix": [
+      "gather",
+      "gather*"
+    ],
+    "body": [
+      "\\begin{gather*}",
+      "\t$0",
+      "\\end{gather*}"
+    ]
+  },
+  "figure environment": {
+    "prefix": [
+      "figure",
+      "fig"
+    ],
+    "body": [
+      "\\begin{figure}[tbp]",
+      "\t\\centering",
+      "\t\\includegraphics[width=0.35\\textwidth,height=.2\\textheight,keepaspectratio]{$1}",
+      "\t\\caption{$2}",
+      "\t\\label{fig:$3}",
+      "\\end{figure}"
+    ]
+  },
+  "double figure": {
+    "prefix": [
+      "doublefigure",
+      "doublefig",
+      "multifigure"
+    ],
+    "body": [
+      "\\begin{figure}[tbp]",
+      "\t\\begin{minipage}{.4875\\textwidth}",
+      "\t\t\\centering",
+      "\t\t\\includegraphics[width=\\textwidth,height=.2\\textheight,keepaspectratio]{$1}",
+      "\t\t\\caption{$2}",
+      "\t\t\\label{fig:$3}",
+      "\t\\end{minipage}%",
+      "\t\\hspace{.025\\textwidth}%",
+      "\t\\begin{minipage}{.4875\\textwidth}",
+      "\t\t\\centering",
+      "\t\t\\includegraphics[width=\\textwidth,height=.2\\textheight,keepaspectratio]{$4}",
+      "\t\t\\caption{$5}",
+      "\t\t\\label{fig:$6}",
+      "\t\\end{minipage}",
+      "\\end{figure}"
+    ]
+  },
+  "table": {
+    "prefix": [
+      "table",
+      "tab"
+    ],
+    "body": [
+      "\\begin{table}[tbp]",
+      "\t\\centering",
+      "\t\\begin{tabular}{$1}",
+      "\t\t\\toprule",
+      "\t\t\t$2 \\\\",
+      "\\midrule",
+      "\t$3 \\\\",
+      "\\bottomrule",
+      "\t\\end{tabular}",
+      "\t\\caption{$4}",
+      "\t\\label{tab:$5}",
+      "\\end{table}"
+    ]
+  },
+  "otherlanguage": {
+    "prefix": [
+      "other",
+      "otherlanguage"
+    ],
+    "body": [
+      "\\begin{otherlanguage}{$1}",
+      "\t$0",
+      "\\end{otherlanguage}"
+    ]
+  },
+  "header": {
+    "prefix": [
+      "header",
+      "head"
+    ],
+    "body": [
+      "\\documentclass[a4paper, 11pt]{article}",
+      "",
+      "\\usepackage[utf8x]{inputenc}",
+      "\\usepackage[a4paper, margin=3cm]{geometry}",
+      "\\usepackage{color}",
+      "\\usepackage{booktabs}",
+      "\\usepackage[hidelinks]{hyperref}",
+      "\\usepackage{url}",
+      "\\usepackage{csquotes}",
+      "",
+      "\\usepackage[main=english, ngerman]{babel}",
+      "\\usepackage{amsmath}",
+      "\\usepackage{amssymb}",
+      "\\usepackage{siunitx}",
+      "",
+      "\\usepackage[noabbrev,capitalise]{cleveref}",
+      "\\usepackage[",
+      "\tmaxbibnames=99,",
+      "\tstyle=numeric-comp,",
+      "\turl=false,",
+      "\tbackend=bibtex8,",
+      "\tsortcites=true,",
+      "]{biblatex}",
+      "\\addbibresource{refs.bib}",
+      "\\DeclareFieldFormat[online]{urldate}{Last accessed: #1}",
+      "\\DeclareFieldFormat{eprint}{arXiv: \\href{https://arxiv.org/abs/#1}{#1}}",
+      "\\DeclareFieldFormat[report]{title}{``#1''}",
+      "",
+      "\\setlength{\\parindent}{1em} % indent for the first sentence of a paragraph",
+      "\\setlength{\\parskip}{0.25em} % Space between paragraphs",
+      "",
+      "\\title{$1}",
+      "\\author{$2}",
+      "\\date{\\today}",
+      "",
+      "\\begin{document}",
+      "",
+      "\\maketitle",
+      "",
+      "$0",
+      "",
+      "\\printbibliography[",
+      "\theading=bibintoc,",
+      "\ttitle={Bibliography}",
+      "]",
+      "",
+      "\\end{document}"
+    ]
+  }
+}

@@ -53,6 +53,7 @@ map("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", opts) -- Curso
 map("n", "<leader>pd", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts) -- previous diagnostic
 map("n", "<leader>nd", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts) -- next diagnostic
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- hover documentation
+map("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts) -- format file
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlights text when yanking",
