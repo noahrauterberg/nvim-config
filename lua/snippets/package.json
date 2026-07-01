@@ -12,7 +12,10 @@
         "path": "./javascript.json"
       },
       {
-        "language": "tex",
+        "language": [
+          "tex",
+          "plaintex"
+        ],
         "path": "./tex.json"
       }
     ]
