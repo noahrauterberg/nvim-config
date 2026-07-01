@@ -71,6 +71,7 @@ return {
     })
 
     vim.lsp.config("gopls", {
+      filetypes = { "go", "gomod", "gowork" },
       settings = {
         gopls = {
           analyses = {

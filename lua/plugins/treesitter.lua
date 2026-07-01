@@ -31,9 +31,9 @@ return {
         pcall(vim.treesitter.start, args.buf)
 
         local ft = vim.bo[args.buf].filetype
-        if ft ~= "python" and ft ~= "c" then
-          vim.bo[args.buf].indentexpr = "nvim_treesitter#indent()"
-        end
+        -- if ft ~= "python" and ft ~= "c" then
+        vim.bo[args.buf].indentexpr = "nvim_treesitter#indent()"
+        -- end
       end,
     })
   end
